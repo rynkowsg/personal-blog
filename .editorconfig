@@ -1,0 +1,16 @@
+[*]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+charset = utf-8
+trim_trailing_whitespace = true
+
+[{Makefile, makefile, GNUmakefile, Makefile.*}]
+indent_style = tab
+indent_size = 4
+
+[*.yaml, *.toml]
+indent_size = 2
+
+[*.sh]
+indent_size = 4
