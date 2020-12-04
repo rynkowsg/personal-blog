@@ -1,3 +1,42 @@
-baseURL = "http://example.org/"
+baseURL = "https://rynkowski.pl"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Greg Rynkowski"
+theme = "etch"
+
+[params]
+  description = "Greg Rynkowski personal blog."
+  copyright = "Copyright © 2020 Greg Rynkowski"
+  dark = "auto"
+  highlight = true
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
+    title = "posts"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    title = "about"
+    url = "/about/"
+    weight = 20
+
+#  [[menu.main]]
+#    identifier = "projects"
+#    name = "projects"
+#    title = "projects"
+#    url = "/projects/"
+#    weight = 30
+
+[permalinks]
+posts = "/:title/"
+
+[markup.goldmark.renderer]
+# Allow HTML in Markdown
+unsafe = true
+
+[markup.tableOfContents]
+ordered = true
