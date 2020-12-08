@@ -1,6 +1,5 @@
 ---
 title: "About"
-draft: true
 ---
 
 Hi, I'm Greg. A Polish living in UK. Husband. Father.
