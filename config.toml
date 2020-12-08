@@ -1,7 +1,7 @@
 baseURL = "https://rynkowski.pl"
 languageCode = "en-us"
 title = "Greg Rynkowski"
-theme = "etch"
+theme = "etch-greg"
 
 [params]
   description = "Greg Rynkowski personal blog."
