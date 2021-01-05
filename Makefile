@@ -8,10 +8,10 @@ FILES=$(shell find content layouts static themes -type f)
 clean:
 	-rm -rf public
 
-build: clean $(FILES) config.toml
+build: clean $(FILES) config.yaml
 	$(HUGO) --gc --log --destination=$(DESTDIR)
 
-build-minified: clean $(FILES) config.toml
+build-minified: clean $(FILES) config.yaml
 	$(HUGO) --gc --log --minify --destination=$(DESTDIR)
 
 .PHONY: server

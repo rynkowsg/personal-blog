@@ -1,0 +1,33 @@
+baseURL: "https://rynkowski.pl"
+languageCode: "en-us"
+title: "Greg Rynkowski"
+theme: "etch-greg"
+
+params:
+  description: "Greg Rynkowski personal blog."
+  copyright: "Copyright © 2020 Greg Rynkowski"
+  dark: "auto"
+  highlight: true
+
+menu:
+  main:
+    - identifier: "posts"
+      name: "posts"
+      title: "posts"
+      url: "/"
+      weight: 10
+    - identifier: "about"
+      name: "about"
+      title: "about"
+      url: "/about/"
+      weight: 20
+
+permalinks:
+  posts: "/:title/"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    ordered: true
