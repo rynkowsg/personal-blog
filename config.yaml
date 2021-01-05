@@ -5,7 +5,7 @@ theme: "etch-greg"
 
 params:
   description: "Greg Rynkowski personal blog."
-  copyright: "Copyright © 2020 Greg Rynkowski"
+  copyright: "Copyright © %s Greg Rynkowski"
   dark: "auto"
   highlight: true
 
