@@ -31,3 +31,6 @@ markup:
       unsafe: true
   tableOfContents:
     ordered: true
+
+# https://analytics.google.com/analytics/web/#/p257668275
+googleAnalytics: G-15HE1RWC59
