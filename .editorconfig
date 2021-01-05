@@ -5,6 +5,9 @@ insert_final_newline = true
 charset = utf-8
 trim_trailing_whitespace = true
 
+[*.html]
+indent_size = 4
+
 [{Makefile, makefile, GNUmakefile, Makefile.*}]
 indent_style = tab
 indent_size = 4
