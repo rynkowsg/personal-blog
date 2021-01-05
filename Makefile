@@ -20,4 +20,5 @@ server:
 
 .PHONY: deploy
 deploy: clean build-minified
-	-aws s3 sync $(DESTDIR) s3://rynkowski.pl
+	-aws s3 sync "$(DESTDIR)/en" s3://rynkowski.uk
+	-aws s3 sync "$(DESTDIR)/pl" s3://rynkowski.pl

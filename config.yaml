@@ -1,26 +1,58 @@
-baseURL: "https://rynkowski.pl"
+####
+## SITE anchors
+
+site_en: &site_en
+  baseURL: "https://rynkowski.uk"
+  title: "Greg Rynkowski"
+  copyright: "Copyright © %s Greg Rynkowski"
+  description: "Greg Rynkowski personal blog"
+
+site_pl: &site_pl
+  baseURL: "https://rynkowski.pl"
+  title: "Grzegorz Rynkowski"
+  copyright: "Copyright © %s Grzegorz Rynkowski"
+  description: "Grzegorz Rynkowski - blog"
+
+####
+## MENU anchors
+
+menu_en: &menu_en
+  menu:
+    main:
+      - identifier: "posts"
+        name: "posts"
+        title: "posts"
+        url: "/"
+        weight: 10
+      - identifier: "about"
+        name: "about"
+        title: "about"
+        url: "/about/"
+        weight: 20
+
+menu_pl: &menu_pl
+  menu:
+    main:
+      - identifier: "posts"
+        name: "posty"
+        title: "posty"
+        url: "/"
+        weight: 10
+      - identifier: "about"
+        name: "o mnie"
+        title: "o mnie"
+        url: "/about/"
+        weight: 20
+
+####
+## MAIN
+
 languageCode: "en-us"
-title: "Greg Rynkowski"
 theme: "etch-greg"
 
 params:
-  description: "Greg Rynkowski personal blog."
-  copyright: "Copyright © %s Greg Rynkowski"
   dark: "auto"
   highlight: true
-
-menu:
-  main:
-    - identifier: "posts"
-      name: "posts"
-      title: "posts"
-      url: "/"
-      weight: 10
-    - identifier: "about"
-      name: "about"
-      title: "about"
-      url: "/about/"
-      weight: 20
 
 permalinks:
   posts: "/:title/"
@@ -32,5 +64,20 @@ markup:
   tableOfContents:
     ordered: true
 
-# https://analytics.google.com/analytics/web/#/p257668275
-googleAnalytics: G-15HE1RWC59
+languages:
+  en:
+    weight: 1
+    languageName: "English"
+    <<: *site_en
+    <<: *menu_en
+    baseURL: "https://rynkowski.uk"
+    # https://analytics.google.com/analytics/web/#/p257705914
+    googleAnalytics: G-59DD9R3DKF
+  pl:
+    weight: 2
+    languageName: "Polski"
+    <<: *site_pl
+    <<: *menu_pl
+    baseURL: "https://rynkowski.pl"
+    # https://analytics.google.com/analytics/web/#/p257668275
+    googleAnalytics: G-15HE1RWC59

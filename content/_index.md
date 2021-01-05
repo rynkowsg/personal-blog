@@ -2,4 +2,4 @@
 title: "Home"
 ---
 
-Personal blog about software, investing and all the topics that got my attention.
+A personal blog about programming, investing and some other topics.
