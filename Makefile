@@ -7,11 +7,15 @@ FILES=$(shell find content layouts static themes -type f)
 .PHONY: clean
 clean:
 	-rm -rf public
-	-./scripts/remove-info-shortcodes.sh
+	@make remove-info
 
 .PHONY: generate-info
-generate-info:
-	./scripts/generate-info-shortcodes.sh
+generate-info: remove-info
+	-./scripts/generate-info-shortcodes.sh
+
+.PHONY: remove-info
+remove-info:
+	-./scripts/remove-info-shortcodes.sh
 
 build: clean generate-info $(FILES) config.yaml
 	$(HUGO) --gc --log --destination=$(DESTDIR)
@@ -20,7 +24,9 @@ build-minified: clean generate-info $(FILES) config.yaml
 	$(HUGO) --gc --log --minify --destination=$(DESTDIR)
 
 .PHONY: server
-server: clean generate-info
+server: generate-info
+	@# rerun generate-info if detected
+	-fswatch -o scripts/ | xargs -n1 -I{} make generate-info &
 	$(HUGO) serve -D
 
 .PHONY: deploy
