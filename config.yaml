@@ -3,12 +3,14 @@
 
 site_en: &site_en
   baseURL: "https://rynkowski.uk"
+  author: "Greg Rynkowski"
   title: "Greg Rynkowski"
   copyright: "Copyright © %s Greg Rynkowski"
   description: "Greg Rynkowski personal blog"
 
 site_pl: &site_pl
   baseURL: "https://rynkowski.pl"
+  author: "Grzegorz Rynkowski"
   title: "Grzegorz Rynkowski"
   copyright: "Copyright © %s Grzegorz Rynkowski"
   description: "Grzegorz Rynkowski - blog"
