@@ -2,4 +2,4 @@
 title: "Główna"
 ---
 
-Blog o programowaniu, inwestowaniu i wszelakich różnościach.
+_Kiedy zrozumiesz, że nic nie ma znaczenia, wszystko stanie się możliwe._

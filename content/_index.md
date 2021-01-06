@@ -2,4 +2,4 @@
 title: "Home"
 ---
 
-A personal blog about programming, investing and some other topics.
+_When you know nothing matters, the universe is yours._
