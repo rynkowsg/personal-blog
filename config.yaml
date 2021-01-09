@@ -78,6 +78,7 @@ languages:
   pl:
     weight: 2
     languageName: "Polski"
+    removePathAccents: true
     <<: *site_pl
     <<: *menu_pl
     baseURL: "https://rynkowski.pl"
