@@ -49,15 +49,20 @@ menu_pl: &menu_pl
 ####
 ## MAIN
 
-languageCode: "en-us"
 theme: "etch-greg"
+removePathAccents: true
 
 params:
   dark: "auto"
   highlight: true
 
 permalinks:
-  posts: "/:title/"
+  # For some of the polish titles, taking title for URL is ok.
+  # It is because sometimes title contains polish characters like "ł" and
+  # Hugo doesn't transform "ł" to "l".
+  # The setting `removePathAccents: true` cares about accents only.
+  # In result, for some of the polish posts, I provide slug.
+  posts: "/:slug/"
 
 markup:
   goldmark:
@@ -70,6 +75,7 @@ languages:
   en:
     weight: 1
     languageName: "English"
+    languageCode: "en-gb"
     <<: *site_en
     <<: *menu_en
     baseURL: "https://rynkowski.uk"
@@ -78,7 +84,7 @@ languages:
   pl:
     weight: 2
     languageName: "Polski"
-    removePathAccents: true
+    languageCode: "pl"
     <<: *site_pl
     <<: *menu_pl
     baseURL: "https://rynkowski.pl"

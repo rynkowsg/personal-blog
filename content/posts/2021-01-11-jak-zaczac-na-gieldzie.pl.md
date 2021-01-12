@@ -1,5 +1,6 @@
 ---
 title: "Jak zacząć na giełdzie?"
+slug: "jak-zaczac-na-gieldzie"
 date: 2021-01-11T17:44:47Z
 ---
 
