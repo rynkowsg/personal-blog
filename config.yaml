@@ -1,5 +1,16 @@
 ####
-## SITE anchors
+## MARKDOWN
+
+markdown: &markdown
+  markup:
+    goldmark:
+      renderer:
+        unsafe: true
+    tableOfContents:
+      ordered: true
+
+####
+## SITE
 
 site_en: &site_en
   baseURL: "https://rynkowski.uk"
@@ -46,34 +57,13 @@ menu_pl: &menu_pl
         url: "/about/"
         weight: 20
 
+
+
 ####
 ## MAIN
 
-theme: "etch-greg"
-removePathAccents: true
-
-params:
-  dark: "auto"
-  highlight: true
-
-permalinks:
-  # For some of the polish titles, taking title for URL is ok.
-  # It is because sometimes title contains polish characters like "ł" and
-  # Hugo doesn't transform "ł" to "l".
-  # The setting `removePathAccents: true` cares about accents only.
-  # In result, for some of the polish posts, I provide slug.
-  posts: "/:slug/"
-
-# Disable tags and categories
-# https://discourse.gohugo.io/t/i-dont-want-tags-and-categories/12091/4
-disableKinds: ["taxonomy", "taxonomyTerm"]
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-  tableOfContents:
-    ordered: true
+####
+## MAIN
 
 languages:
   en:
@@ -94,3 +84,28 @@ languages:
     baseURL: "https://rynkowski.pl"
     # https://analytics.google.com/analytics/web/#/p257668275
     googleAnalytics: G-15HE1RWC59
+
+<<: *markdown
+
+theme: "etch-greg"
+removePathAccents: true
+
+params:
+  dark: "auto"
+  highlight: true
+
+permalinks:
+  # For some of the polish titles, taking title for URL is ok.
+  # It is because sometimes title contains polish characters like "ł" and
+  # Hugo doesn't transform "ł" to "l".
+  # The setting `removePathAccents: true` cares about accents only.
+  # In result, for some of the polish posts, I provide slug.
+  posts: "/:slug/"
+
+# Disable tags and categories
+# https://discourse.gohugo.io/t/i-dont-want-tags-and-categories/12091/4
+disableKinds: ["taxonomy", "taxonomyTerm"]
+
+####
+## SEO
+
