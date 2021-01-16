@@ -1,3 +1,6 @@
+# https://gohugo.io/getting-started/configuration/#example-configuration
+# https://gohugo.io/variables/site/
+
 ####
 ## MARKDOWN
 
@@ -10,21 +13,23 @@ markdown: &markdown
       ordered: true
 
 ####
-## SITE
+## GLOBAL
 
-site_en: &site_en
+global_en: &global_en
   baseURL: "https://rynkowski.uk"
-  author: "Greg Rynkowski"
   title: "Greg Rynkowski"
-  copyright: "Copyright © :YEAR: Greg Rynkowski"
-  description: "Greg Rynkowski personal blog"
+  Author: { name: "Greg Rynkowski" }
+  params:
+    copyright: "Copyright © :YEAR: Greg Rynkowski"
+    description: "Greg Rynkowski personal blog"
 
-site_pl: &site_pl
+global_pl: &global_pl
   baseURL: "https://rynkowski.pl"
-  author: "Grzegorz Rynkowski"
   title: "Grzegorz Rynkowski"
-  copyright: "Copyright © :YEAR: Grzegorz Rynkowski"
-  description: "Grzegorz Rynkowski - blog"
+  Author: { name: "Grzegorz Rynkowski" }
+  params:
+    copyright: "Copyright © :YEAR: Grzegorz Rynkowski"
+    description: "Grzegorz Rynkowski - blog"
 
 ####
 ## MENU anchors
@@ -57,11 +62,6 @@ menu_pl: &menu_pl
         url: "/about/"
         weight: 20
 
-
-
-####
-## MAIN
-
 ####
 ## MAIN
 
@@ -70,7 +70,7 @@ languages:
     weight: 1
     languageName: "English"
     languageCode: "en-gb"
-    <<: *site_en
+    <<: *global_en
     <<: *menu_en
     baseURL: "https://rynkowski.uk"
     # https://analytics.google.com/analytics/web/#/p257705914
@@ -79,7 +79,7 @@ languages:
     weight: 2
     languageName: "Polski"
     languageCode: "pl"
-    <<: *site_pl
+    <<: *global_pl
     <<: *menu_pl
     baseURL: "https://rynkowski.pl"
     # https://analytics.google.com/analytics/web/#/p257668275
@@ -109,3 +109,4 @@ disableKinds: ["taxonomy", "taxonomyTerm"]
 ####
 ## SEO
 
+enableRobotsTXT: true

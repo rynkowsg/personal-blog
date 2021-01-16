@@ -1,6 +1,10 @@
 ---
 title: "About"
 renderTitle: false
+type: page
+date: 2020-12-04T17:08:47Z
+renderDate: false
+tags: ["me"]
 ---
 
 # About me
