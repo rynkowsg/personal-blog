@@ -64,6 +64,10 @@ permalinks:
   # In result, for some of the polish posts, I provide slug.
   posts: "/:slug/"
 
+# Disable tags and categories
+# https://discourse.gohugo.io/t/i-dont-want-tags-and-categories/12091/4
+disableKinds: ["taxonomy", "taxonomyTerm"]
+
 markup:
   goldmark:
     renderer:
